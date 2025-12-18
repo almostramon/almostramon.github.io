@@ -2,38 +2,79 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Meine Landing Page</title>
+  <title>LoTooS</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  
+
+<!-- LOGO -->
+
+<div class="logo">
+  <img src="images/logo.svg" alt="Mein Logo">
+</div>
+
+<!-- TEXTFELD -->
+
 <body>
 
-  <header class="site-header">
-    <div class="nav">
-      <div class="logo">Meine Seite</div>
-
-      <nav>
-        <a href="#">Start</a>
-        <a href="#">Verzeichnis</a>
-        <a href="#">Kontakt</a>
-      </nav>
-    </div>
-  </header>
-
   <main class="container">
-    <h1>Meine Landing Page</h1>
+    <h1>Bewerbungsportal</h1>
 
     <p>
-      Hier entsteht eine einfache Landing Page.
-      Später kommt hier ein Verzeichnis / Übersicht rein.
+      Hier kannst du dich als Architekt:in bewerben. <br> Test Test Test
     </p>
 
-    <ul class="directory">
-      <li>Eintrag 1</li>
-      <li>Eintrag 2</li>
-      <li>Eintrag 3</li>
-    </ul>
   </main>
+
+
+<!-- FORUM -->
+
+<form action="mailto:cubehorizonstudios@gmail.com" method="post" enctype="text/plain">
+
+  <!-- Name -->
+  <label for="name">Discord-Name *</label>
+  <input
+    type="text"
+    id="name"
+    name="name"
+    placeholder="z.B. lotoos.spieler"
+    required
+  >
+
+  <!-- Alter -->
+  <label for="number">Alter *</label>
+  <input
+    type="number"
+    id="alter"
+    name="alter"
+    placeholder="Dein Alter"
+    min="14"
+    max="99"
+    required
+    
+    >
+
+  <!-- Plotnummer -->
+  <label for="plotnummer">Plotnummer *</label>
+  <select id="plotnummer" name="plotnummer">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+
+  <!-- Zusatz -->
+  <label for="message">Zusatz</label>
+  <textarea
+    id="message"
+    name="message"
+    rows="1"
+    placeholder="Falls du etwas zu sagen hast"
+  ></textarea>
+
+  <button type="submit">Absenden</button>
+</form>
+
 
 </body>
 
