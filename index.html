@@ -1,82 +1,71 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>LoTooS</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>LoTooS Bewerbung</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo.svg">
+
 </head>
-
-<!-- LOGO -->
-
-<div class="logo">
-  <img src="images/logo.svg" alt="Mein Logo">
-</div>
-
-<!-- TEXTFELD -->
-
 <body>
 
-  <main class="container">
-    <h1>Bewerbungsportal</h1>
+<div class="layout">
 
-    <p>
-      Hier kannst du dich als Architekt:in bewerben. <br> Test Test Test
-    </p>
+    <!-- Linke Seite -->
+    <section class="sidebar">
+        <img src="images/logo.svg" alt="Logo" class="sidebar__logo">
+        <p class="sidebar__text">
+            Hallo, hier muss ein Text hin<br>
+            Fülle das Formular aus, um dich zu bewerben.
+        </p>
+    </section>
 
-  </main>
+    <!-- Rechte Seite -->
+    <section class="content">
+        <div class="form-card">
+            <h2 class="form-card__title">Bewerbungsformular</h2>
 
+            <form class="form" id="forumForm">
+    <div class="form__group">
+        <label class="form__label">Minecraft Name</label>
+        <input class="form__input" type="text" name="minecraft" required>
+    </div>
 
-<!-- FORUM -->
+    <div class="form__group">
+        <label class="form__label">Discord Name</label>
+        <input class="form__input" type="text" name="discord" required>
+    </div>
 
-<form action="mailto:cubehorizonstudios@gmail.com" method="post" enctype="text/plain">
+    <div class="form__group">
+        <label class="form__label">Alter</label>
+        <input class="form__input" type="number" name="alter" required>
+    </div>
 
-  <!-- Name -->
-  <label for="name">Discord-Name *</label>
-  <input
-    type="text"
-    id="name"
-    name="name"
-    placeholder="z.B. lotoos.spieler"
-    required
-  >
+    <div class="form__group">
+        <label class="form__label">Plot</label>
+        <select class="form__input" name="anzahl" required>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
 
-  <!-- Alter -->
-  <label for="number">Alter *</label>
-  <input
-    type="number"
-    id="alter"
-    name="alter"
-    placeholder="Dein Alter"
-    min="14"
-    max="99"
-    required
-    
-    >
+    <div class="form__group">
+        <label class="form__label">Zusatz (optional)</label>
+        <textarea class="form__input form__textarea" name="zusatz"></textarea>
+    </div>
 
-  <!-- Plotnummer -->
-  <label for="plotnummer">Plotnummer *</label>
-  <select id="plotnummer" name="plotnummer">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-  </select>
-
-  <!-- Zusatz -->
-  <label for="message">Zusatz</label>
-  <textarea
-    id="message"
-    name="message"
-    rows="1"
-    placeholder="Falls du etwas zu sagen hast"
-  ></textarea>
-
-  <button type="submit">Absenden</button>
+    <button class="form__button" type="submit">Absenden</button>
 </form>
 
+        </div>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
-
-
 </html>

@@ -1,79 +1,114 @@
-/* Basis */
+/* Reset & Basics */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-
-
-/* BASIC */
 
 body {
-  margin: 0;
-  min-height: 100vh;
-
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #1f1f1f;
-}
-h1 {
-  font-size: 30px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
 }
 
-/* LOGO */
-
-.logo {
-  height: auto;
-  width: 200px;
-  margin: 50px auto;  
+/* Layout */
+.layout {
+    display: flex;
+    min-height: 100vh;
 }
 
-
-/* FORUM */
-/* Hauptinhalt */
-.container {
-  background: rgb(41, 190, 75);
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0px auto;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-/* Forum */
-form {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-width: 1200px;
-  margin: 80px auto;
+/* Sidebar */
+.sidebar {
+    width: 35%;
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+    color: white;
+    padding: 60px 40px;
 }
 
-label {
-  font-weight: 500;
-  color: rgb(41, 190, 75);
+.sidebar__logo {
+    width: 200px;
+    margin-bottom: 0px;
 }
 
-input,
-select,
-textarea {
-  font-size: 16px;
-  padding: 10px 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+.sidebar__text {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.9;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: #333;
+/* Content */
+.content {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-button {
-  margin-top: 70px;
-  padding: 12px;
-  background-color: rgb(41, 190, 75);
-  font-size: 16px;
-  color: #1f1f1f;
-  border-width: 0px;
-  border-radius: 10px;
+/* Form Card */
+.form-card {
+    background-color: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    border-radius: 0px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
+.form-card__title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Form */
+.form__group {
+    margin-bottom: 18px;
+}
+
+.form__label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.form__input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 0px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form__input:focus {
+    outline: none;
+    border-color: #4d6cfa;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+
+.form__textarea {
+    resize: vertical;
+}
+
+/* Button */
+.form__button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 0px;
+    border: none;
+    background-color: #4d6cfa;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.1s;
+}
+
+.form__button:hover {
+    background-color: #3650ad;
+}
+
+.form__button:active {
+    transform: scale(0.98);
+}
