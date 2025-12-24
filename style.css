@@ -1,4 +1,4 @@
-/* Reset & Basics */
+/* Basics */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,17 +23,90 @@ body {
     background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
     color: white;
     padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar__logo {
     width: 200px;
-    margin-bottom: 0px;
+    display: block;
+    margin: 0 auto 30px;
+    margin-top: 10px;
+}
+
+.sidebar__text-box {
+    width: 100%;
+    padding: 20px;
+
+    text-align: left;
+}
+
+.sidebar__heading1 {
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 .sidebar__text {
     font-size: 15px;
     line-height: 1.6;
     opacity: 0.9;
+}
+
+/* Button */
+.sidebar__discord-button {
+    background-color: rgba(88, 101, 242, 0.15);
+    padding: 14px;
+    border-radius: 0px;
+    margin: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 
+        background-color 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Icon */
+.sidebar__discord-icon {
+    width: 42px;
+    height: 42px;
+}
+
+/* Hover active */
+.sidebar__discord-button:hover {
+    background-color: rgba(88, 101, 242, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(88, 101, 242, 0.4);
+}
+
+.sidebar__discord-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(88, 101, 242, 0.25);
+}
+
+/* Links unten */
+.sidebar__footer {
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: auto;
+    margin-left: 20px;
+}
+
+.sidebar__link {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar__link:hover {
+    text-decoration: underline;
+}
+
+.sidebar__separator {
+    margin: 0 6px;
+    opacity: 0.6;
 }
 
 /* Content */
@@ -102,13 +175,24 @@ body {
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.5s, transform 0.1s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 
+        background-color 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
 }
 
 .form__button:hover {
-    background-color: #3650ad;
+    background-color: #3f5ae0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(88, 101, 242, 0.4);
 }
 
 .form__button:active {
-    transform: scale(0.98);
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(88, 101, 242, 0.15);
 }

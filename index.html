@@ -14,10 +14,30 @@
     <!-- Linke Seite -->
     <section class="sidebar">
         <img src="images/logo.svg" alt="Logo" class="sidebar__logo">
+
+    <div class="sidebar__discord-box">
+         <a href="https://discord.gg/aGpMxWkwZG"
+            class="sidebar__discord-button"
+            target="_blank"
+             rel="noopener noreferrer">
+             <img src="images/Discord.svg" alt="Discord" class="sidebar__discord-icon">
+        </a>
+    </div>
+
+    <div class="sidebar__text-box">
+      <h1 class="sidebar__heading1">So gehts:</h1>
         <p class="sidebar__text">
             Hallo, hier muss ein Text hin<br>
             Fülle das Formular aus, um dich zu bewerben.
         </p>
+    </div>
+
+        <footer class="sidebar__footer">
+            <a href="datenschutz.html" class="sidebar__link">Datenschutz</a>
+            <span class="sidebar__separator">·</span>
+            <a href="impressum.html" class="sidebar__link">Impressum</a>
+        </footer>
+        
     </section>
 
     <!-- Rechte Seite -->
@@ -38,7 +58,7 @@
 
     <div class="form__group">
         <label class="form__label">Alter</label>
-        <input class="form__input" type="number" name="alter" required>
+        <input class="form__input" type="number" name="alter" max="99" min="14" required>
     </div>
 
     <div class="form__group">
